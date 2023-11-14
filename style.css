@@ -1,0 +1,641 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
+  /*margin: 1em 2em;*/
+  color: white;
+  overflow-x: hidden;
+}
+
+a{
+  color: gray;
+}
+
+/*.menu-icono{
+width: 100%;
+opacity: 0.7;
+}*/
+
+.menu-container {
+  text-align: center;
+}
+
+.menu-horizontal{
+list-style: none;
+display: flex;
+justify-content: center;
+  gap: 1em;
+  background: rgb(241 0 255 / 47%);
+  width: 30em;
+  margin: auto;
+  align-items: center;
+  border-radius: 1em;
+}
+.menu-horizontal > li > a{
+display: block;
+color: white;
+text-decoration: none;
+}
+
+.menu-vertical{
+position: absolute;
+display: none;
+list-style: none;
+width: 200px;
+background-color: rgb(249 144 255 / 77%);
+border-radius: 1em;
+}
+.menu-horizontal li:hover .menu-vertical{
+display: block;
+}
+
+.menu-vertical li a{
+display: block;
+color: white;
+text-decoration: none;
+}
+
+
+.navbar li {
+  padding: 0.5em 1em;
+}
+
+.navbar li:hover {
+  background: #a520ad;
+}
+
+.navbar a {
+color: white;
+}
+
+.navbar a:hover {
+color: #ffd676;
+}
+
+/*.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  background: rgb(241 0 255 / 47%);
+  width: 30em;
+  margin: auto;
+  align-items: center;
+  border-radius: 1em;
+}
+
+.navbar li {
+  padding: 0.5em 1em;
+}
+
+.navbar li:hover {
+  background: #a520ad;
+}
+
+.navbar a {
+color: white;
+}
+
+.navbar a:hover {
+color: #ffd676;
+} */
+
+
+
+.header-content.container {
+padding-top: 2em;
+height: 600px;  background-image: url("./imgs/concierto.png");
+background-position: 50% 50%;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+/*
+margin-left: -10%;
+margin-right: -10%;
+*/
+}
+
+/* .header-content img {
+width: 120%;
+margin-left: -10%;
+opacity: 0.7;
+} */
+
+.letterspara {
+margin-top: 15%;
+text-align: center;
+color: #710078;
+}
+
+/*CARRUSEL*/
+.carrusel {
+width: 100%;
+/*height: 600px;*/
+overflow: hidden;
+}
+
+.carrusel ul {
+display: flex;
+animation: cambio 20s infinite alternate linear;
+width: 300%;
+}
+
+.carrusel li {
+width: 100%;
+list-style: none;
+}
+
+.carrusel img {
+width: 100%;
+height: 100%;
+}
+
+@keyframes cambio {
+0%{margin-left: 0;}
+25%{margin-left: 0;}
+
+45%{margin-left: -100%;}
+50%{margin-left: -100%;}
+
+75%{margin-left: -200%;}
+100%{margin-left: -200%;}
+}
+
+.cantantes-grupo .cantantes-1 img {
+width: 100%;
+height: 500px;
+}
+
+.cantantes-grupo {
+display: flex;
+}
+
+.cantantes-1 {
+width: 100%;
+padding: 10px;
+text-align: center;
+}
+
+.cantantes h2, .eventos-content h2, .precios-content h2, .title-content, .sobrenosotros h2 {
+text-align: center;
+color: white;
+text-shadow: -2px 2px black;
+font-size: 32px;
+}
+
+.cantantes h2:before, .eventos-content h2:before, .precios-content h2:before, .title-content:before, .sobrenosotros h2:before {
+content: "";
+width: 100%;
+background: #710078;
+height: 1.2em;
+position: absolute;
+z-index: -1;
+left: 0;
+}
+
+/* SECCION EVENTOS */
+
+/** EFECTO TARJETA SECCION EVENTOS */
+
+.wrapper, .single-card, .single-card img {
+height: 450px;
+max-width: 600px;
+margin: 0 auto;
+position: relative;
+border-radius: 50px;
+}
+.wrapper {
+perspective: 900px;
+}
+.single-card {
+text-align: center;
+transition: all 1.5s cubic-bezier(0.7, -0.5, 0.3, 1.8);
+transform-style: preserve-3d;
+}
+.wrapper:hover .single-card {
+transform: rotateY(180deg);
+}
+.front, .back {
+width: 600px;
+position: relative;
+top: 0;
+left: 0;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+.front {
+cursor: pointer;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+border-radius: 50px;
+background-size: cover;
+background-position: center center;
+}
+.back {
+transform: rotateY(180deg);
+position: absolute;
+border-radius: 50px;
+height: 450px;
+background: #fffefe;
+  opacity: 0.9;
+}
+.content {
+  position: absolute;
+  margin-top: -20%;
+  margin-left: 35%;
+  text-shadow: 2px 0 #332f2f, -2px 0 #332f2f, 0 2px #332f2f, 0 -2px #332f2f, 1px 1px #332f2f, -1px -1px #332f2f, 1px -1px #332f2f, -1px 1px #332f2f;
+}
+.content h2 {
+font-size: 35px;
+margin: 0;
+font-weight: 300;
+}
+.content h4 {
+margin: 0;
+}
+
+/*   PRECIOS  */
+
+.entradas-grupo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.entradas-1 {
+  padding: 1em;
+  border: 2px solid #616161;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.entradas-1 img {
+  width: 300px;
+  height: 200px;
+}
+
+.notas li {
+  list-style: circle;
+  text-align: justify;
+  padding-bottom: 10px;
+}
+
+.notas {
+  padding: 2em;
+  width: 50%;
+  margin: auto;
+  border: 1px solid #616161;
+  border-radius: 20px;
+  background: #2b2b2b;
+}
+
+
+/* FORMULARIO */
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #f68e44;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #b79726;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box a:hover {
+  background: #f49803;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #f4c803,
+              0 0 25px #bd9d0b,
+              0 0 50px #f4e403,
+              0 0 100px #d5cf1e;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f4c003);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+0% {
+  left: -100%;
+}
+50%,100% {
+  left: 100%;
+}
+}
+
+.login-box a span:nth-child(2) {
+top: -100%;
+right: 0;
+width: 2px;
+height: 100%;
+background: linear-gradient(180deg, transparent, #f4bc03);
+animation: btn-anim2 1s linear infinite;
+animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+0% {
+  top: -100%;
+}
+  50%,100% {
+  top: 100%;
+}
+}
+
+.login-box a span:nth-child(3) {
+bottom: 0;
+right: -100%;
+width: 100%;
+height: 2px;
+background: linear-gradient(270deg, transparent, #f4dc03);
+animation: btn-anim3 1s linear infinite;
+animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+0% {
+  right: -100%;
+}
+50%,100% {
+  right: 100%;
+}
+}
+
+.login-box a span:nth-child(4) {
+bottom: -100%;
+left: 0;
+width: 2px;
+height: 100%;
+background: linear-gradient(360deg, transparent, #f4b003);
+animation: btn-anim4 1s linear infinite;
+animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+0% {
+  bottom: -100%;
+}
+50%,100% {
+  bottom: 100%;
+}
+}
+
+/* .card {
+background-color: #250935;
+width: 50%;
+height: 500px;
+margin-top: 4em;
+}
+
+.card p {
+position: absolute;
+text-align: center;
+color: #fff;
+} */
+
+.avisoge {
+display: flex;
+justify-content: center;
+align-items: center;
+background: #250935;
+}
+
+.card1 {
+width: 50%;
+padding: 4em;
+text-align: center;
+font-size: 2em;
+line-height: 2em;
+}
+
+.card-img img {
+height: 500px;
+}
+
+.card-img {
+width: 50%;
+}
+
+/* Boton Regresar */ 
+
+.btn-1 img {
+  width: 4em;
+  position: fixed;
+  bottom: 5%;
+}
+
+/* FOOTER */
+
+.footer-content {
+background-color: #710078;
+height: auto;
+/* width: 100vw*/
+color: #fff;
+text-align: center;
+padding: 2em;
+/*margin: -1em -2em;*/
+margin-top: 1em;
+}
+
+
+/* VISTA EN MOBILES */
+
+@media only screen and (max-width: 600px) {
+  .header-content.container {
+    padding-top: 3em;
+    height: 500px;
+  }
+  .letterspara {
+    margin-top: 30%;
+  }
+  .menu-horizontal {
+    width: 100%;
+    border-radius: 0;
+  }
+  .navbar li {
+    font-size: 1.1em;
+  }
+  
+  .cantantes-grupo {
+    flex-direction: column;
+  }
+  .wrapper, .single-card, .single-card img {
+    height: 300px;
+    max-width: 400px;
+  }
+
+  .front, .back {
+    width: 400px;
+  }
+
+  .back {
+    height: 100%;
+  }
+  .entradas-grupo {
+    flex-direction: column;
+  }
+  .entradas-1 {
+    width: 90%;
+    margin: 1em auto;
+  }
+  .notas {
+    width: 95%;
+  }
+  .avisoge {
+    flex-direction: column-reverse;
+    margin-top: 2em;
+  }
+  .card1 {
+    width: 100%;
+    padding: 2em;
+    font-size: 1.2em;
+  }
+  .card-img img {
+    height: auto;
+    width: 100%;
+  }
+  .card-img {
+    width: 100%;
+  }
+  .menu-vertical {
+    width: 80%;
+    background-color: rgb(217 111 224);
+    border-radius: 1em;
+    left: 10%;
+    margin-top: 0.5em;
+  }
+}
+
+
+/*              */
+
+
+
+/*         VISTA EN TABLET       */
+
+@media only screen and (min-width: 601px) and (max-width: 1280px) {
+  .header-content.container {
+    padding-top: 3em;
+    height: 500px;
+  }
+  .letterspara {
+    margin-top: 20%;
+  }
+  .menu-horizontal {
+    width: 80%;
+  }
+  .navbar li {
+    font-size: 1.3em;
+  }
+
+  .wrapper, .single-card, .single-card img {
+    height: 330px;
+    width: 500px;
+  }
+
+  .front, .back {
+    width: 500px;
+  }
+
+  .back {
+    height: 100%;
+  }
+  .notas {
+    width: 95%;
+  }
+  .avisoge {
+    margin-top: 2em;
+  }
+  .card1 {
+    padding: 1em;
+  }
+  .card-img img {
+    width: 100%;
+  }
+  .menu-vertical {
+    width: 80%;
+    background-color: rgb(217 111 224);
+    border-radius: 1em;
+    left: 10%;
+    margin-top: 0.5em;
+  }
+}
